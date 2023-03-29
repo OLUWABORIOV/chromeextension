@@ -4,12 +4,25 @@ const inputEl = document.getElementById("input-el")
 const inputBtn = document.getElementById("input-btn")
 const ulEl = document.getElementById("ul-el")
 const deleteBtn = document.getElementById("delete-btn")
-let leadsFromLocalStorage = JSON.parse( localStorage.getItem("myLeads") )
-console.log(leadsFromLocalStorage)
+const tabBtn = document.getElementById("tab-btn")
+
+
 if (leadsFromLocalStorage) {
     myLeads = leadsFromLocalStorage
     render(myLeads)
 }
+
+const tabs = [
+    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+]
+
+// 2. Listen for clicks on tabBtn. Log Per's LinkedIn URL to the console
+tabBtn.addEventListener("click", function(){
+    console.log(tabs)
+})
+
+
+
 
 function render(leads) {
     let listItems = ""
@@ -52,6 +65,14 @@ inputBtn.addEventListener("click", function() {
 
  //localStorage.clear()
 
+ 
+
+
+
+
+// Call it with an array as an argument to verify that it works
+ 
+    
  
 
 
